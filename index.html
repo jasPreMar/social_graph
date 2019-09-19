@@ -40,11 +40,15 @@
                 },
                 relationships: {
                     "IMPACTS": {
-                        "thickness": "weight",
-                        "caption": "how"
+                        "thickness": "count",
+                        "caption": false
                     }
                 },
-                initial_cypher: "MATCH (n)-[r:IMPACTS]->(m) RETURN *"
+                arrows: true,
+                hierarchical: true,
+                hierarchical_sort_method: "directed",
+                initial_cypher: "MATCH (n)-[r:IMPACTS]->(m) RETURN * LIMIT 100",
+                trust: "TRUST_SYSTEM_CA_SIGNED_CERTIFICATES"
             };
 
             viz = new NeoVis.default(config);
