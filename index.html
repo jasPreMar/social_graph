@@ -48,7 +48,7 @@
                 hierarchical: true,
                 hierarchical_sort_method: "directed",
                 initial_cypher: "MATCH (n)-[r:IMPACTS]->(m) RETURN * LIMIT 100",
-                trust: "TRUST_SYSTEM_CA_SIGNED_CERTIFICATES"
+                encrypted: "ENCRYPTION_ON"
             };
 
             viz = new NeoVis.default(config);
